@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CF182AE9207A568F00DD9679 /* MassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF182AE8207A568F00DD9679 /* MassViewController.swift */; };
-		CFAEFFA42074D6E700689D0F /* SpeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAEFFA32074D6E700689D0F /* SpeedView.swift */; };
 		CFD5F28A207A56D4003BBC97 /* SpeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD5F289207A56D4003BBC97 /* SpeedViewController.swift */; };
 		CFD5F28C207A56DC003BBC97 /* TemperatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD5F28B207A56DC003BBC97 /* TemperatureViewController.swift */; };
 		CFD5F28E207A56E3003BBC97 /* DistanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD5F28D207A56E2003BBC97 /* DistanceViewController.swift */; };
@@ -24,7 +23,6 @@
 
 /* Begin PBXFileReference section */
 		CF182AE8207A568F00DD9679 /* MassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MassViewController.swift; sourceTree = "<group>"; };
-		CFAEFFA32074D6E700689D0F /* SpeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedView.swift; sourceTree = "<group>"; };
 		CFD5F289207A56D4003BBC97 /* SpeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedViewController.swift; sourceTree = "<group>"; };
 		CFD5F28B207A56DC003BBC97 /* TemperatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureViewController.swift; sourceTree = "<group>"; };
 		CFD5F28D207A56E2003BBC97 /* DistanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceViewController.swift; sourceTree = "<group>"; };
@@ -81,7 +79,6 @@
 				CFE56F5D2074B51C00CB6E4B /* Main.storyboard */,
 				CFE56F632074B51C00CB6E4B /* Assets.xcassets */,
 				CFE56F652074B51C00CB6E4B /* LaunchScreen.storyboard */,
-				CFAEFFA32074D6E700689D0F /* SpeedView.swift */,
 				CFE56F682074B51C00CB6E4B /* Info.plist */,
 				CFE56F602074B51C00CB6E4B /* UniCon.xcdatamodeld */,
 			);
@@ -166,7 +163,6 @@
 				CFE56F622074B51C00CB6E4B /* UniCon.xcdatamodeld in Sources */,
 				CFE56F5C2074B51C00CB6E4B /* ViewController.swift in Sources */,
 				CFD5F292207A6BF2003BBC97 /* ResultViewController.swift in Sources */,
-				CFAEFFA42074D6E700689D0F /* SpeedView.swift in Sources */,
 				CFD5F290207A56E8003BBC97 /* CupViewController.swift in Sources */,
 				CFD5F28C207A56DC003BBC97 /* TemperatureViewController.swift in Sources */,
 				CFE56F5A2074B51C00CB6E4B /* AppDelegate.swift in Sources */,

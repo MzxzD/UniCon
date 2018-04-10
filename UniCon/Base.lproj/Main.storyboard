@@ -13,8 +13,6 @@
         <!--Cup View Controller-->
         <scene sceneID="Izy-rT-NIx">
             <objects>
-                <exit id="28q-G6-dxk" userLabel="Exit" sceneMemberID="exit"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EH9-dj-5yN" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="RjA-B9-qEA" customClass="CupViewController" customModule="UniCon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yAC-Dx-hwH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -82,7 +80,13 @@
                         <color key="backgroundColor" red="0.85372814119999996" green="0.30511897830000001" blue="0.30465456159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="lqp-ZG-H3x"/>
                     </view>
+                    <connections>
+                        <outlet property="cupValueInput" destination="xQG-uU-aUD" id="QG8-5w-ei1"/>
+                        <outlet property="cupValueInputOut" destination="GfL-VN-6Oi" id="o05-el-EYq"/>
+                    </connections>
                 </viewController>
+                <exit id="28q-G6-dxk" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EH9-dj-5yN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-975" y="2005.9859154929577"/>
         </scene>
@@ -121,7 +125,7 @@
                                 <inset key="imageEdgeInsets" minX="90" minY="5" maxX="90" maxY="5"/>
                                 <state key="normal" title="Button" image="mass"/>
                                 <connections>
-                                    <segue destination="bVp-rE-myl" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="7Yv-d7-JpH"/>
+                                    <segue destination="bVp-rE-myl" kind="presentation" modalPresentationStyle="fullScreen" id="7Yv-d7-JpH"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UniCon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9b-ry-qwD">
@@ -152,7 +156,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="feF-BN-wEC" kind="presentation" modalPresentationStyle="formSheet" modalTransitionStyle="partialCurl" id="gJu-SJ-e2x"/>
+                                    <segue destination="feF-BN-wEC" kind="presentation" modalPresentationStyle="fullScreen" id="gJu-SJ-e2x"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lta-jP-Tks">
@@ -243,6 +247,10 @@
                         <color key="backgroundColor" red="0.23296441919999999" green="0.71483450869999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="y6G-Lc-Fcg"/>
                     </view>
+                    <connections>
+                        <outlet property="massValueInput" destination="xNe-vc-LGu" id="ucX-8y-8aF"/>
+                        <outlet property="massValueInputOut" destination="jzX-3G-C1J" id="cI0-BV-LIN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0cq-xJ-qCr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="2OZ-Ps-gWq" userLabel="Exit" sceneMemberID="exit"/>
@@ -319,6 +327,10 @@
                         <color key="backgroundColor" red="0.26291237540000001" green="1" blue="0.20738750519999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Ski-zE-XdB"/>
                     </view>
+                    <connections>
+                        <outlet property="temperatireValueInput" destination="fWm-hx-tMN" id="HWj-pM-dE0"/>
+                        <outlet property="temperatureValueInputOut" destination="u6M-bj-YmI" id="gH5-zA-Gws"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wZB-jh-15p" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Zqb-fu-2T6" userLabel="Exit" sceneMemberID="exit"/>
@@ -363,13 +375,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SGW-2G-5pR">
-                                <rect key="frame" x="112" y="133" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0iB-5H-mzh">
                                 <rect key="frame" x="112" y="225" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -391,10 +396,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SGW-2G-5pR">
+                                <rect key="frame" x="112" y="124" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.99116124210000001" green="1" blue="0.15449084090000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Ay9-OZ-SY3"/>
                     </view>
+                    <connections>
+                        <outlet property="distanceInput" destination="SGW-2G-5pR" id="TWn-Dl-8Tu"/>
+                        <outlet property="distanceInputOut" destination="NBo-Tu-1FW" id="H51-kF-1sF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0A4-qP-hMG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="4q5-Uz-BuW" userLabel="Exit" sceneMemberID="exit"/>
@@ -473,7 +489,6 @@
                                     <color key="titleColor" red="0.26291237540000001" green="1" blue="0.20738750519999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="back:" destination="Mft-qZ-oWA" eventType="touchUpInside" id="Rj5-bz-3JY"/>
                                     <segue destination="Mft-qZ-oWA" kind="unwind" unwindAction="backWithSegue:" id="XMO-jj-2PU"/>
                                 </connections>
                             </button>
@@ -523,6 +538,10 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="uk8-eL-499"/>
                     </view>
+                    <connections>
+                        <outlet property="speedValueField" destination="1a2-FE-3aL" id="OAQ-YS-e8P"/>
+                        <outlet property="speedValueFieldOut" destination="mqn-J5-7aq" id="grp-EC-P0d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WfZ-KU-Zha" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Mft-qZ-oWA" userLabel="Exit" sceneMemberID="exit"/>
@@ -541,6 +560,6 @@
         <image name="temperature" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dnI-eI-oos"/>
+        <segue reference="bZr-nY-FH8"/>
     </inferredMetricsTieBreakers>
 </document>

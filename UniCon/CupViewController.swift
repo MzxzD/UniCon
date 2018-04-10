@@ -1,5 +1,5 @@
 //
-//  MassViewController.swift
+//  CupViewController.swift
 //  UniCon
 //
 //  Created by Mateo Došlić on 08/04/2018.
@@ -8,13 +8,14 @@
 
 import UIKit
 
-class MassViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
+class CupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
 
+    @IBOutlet weak var cupValueInput: UITextField!
+    @IBOutlet weak var cupValueInputOut: UITextField!
     
-    @IBOutlet weak var massValueInput: UITextField!
-    @IBOutlet weak var massValueInputOut: UITextField!
+    let cupValue = ["mL", "L", "g", "cup", "OZ"]
     
-    let massValue = ["gram", "kg", "ton", "pound"]
+    
     
     var pickerView1 = UIPickerView()
     var pickerView2 = UIPickerView()
@@ -27,10 +28,10 @@ class MassViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         pickerView2.delegate = self
         pickerView2.dataSource = self
         
-        massValueInput.inputView = pickerView1
-        massValueInputOut.inputView = pickerView2
-        massValueInputOut.textAlignment = .center
-        massValueInput.textAlignment = .center
+        cupValueInput.inputView = pickerView1
+        cupValueInputOut.inputView = pickerView2
+        cupValueInputOut.textAlignment = .center
+        cupValueInput.textAlignment = .center
         
     }
     
@@ -48,28 +49,29 @@ class MassViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     
     public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
-        return massValue.count
+        return cupValue.count
     }
     
     
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return massValue[row]
+        return cupValue[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView == pickerView1 {
-            massValueInput.text = massValue[row]
-            massValueInput.resignFirstResponder()
+            cupValueInput.text = cupValue[row]
+            cupValueInput.resignFirstResponder()
             
         } else if pickerView == pickerView2{
-            massValueInputOut.text = massValue[row]
-            massValueInputOut.resignFirstResponder()
+            cupValueInputOut.text = cupValue[row]
+            cupValueInputOut.resignFirstResponder()
         }
         
         
         
         
     }
+    
 
 }

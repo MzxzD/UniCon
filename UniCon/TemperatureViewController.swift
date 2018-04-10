@@ -1,5 +1,5 @@
 //
-//  MassViewController.swift
+//  TemperatureViewController.swift
 //  UniCon
 //
 //  Created by Mateo Došlić on 08/04/2018.
@@ -8,13 +8,12 @@
 
 import UIKit
 
-class MassViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
+class TemperatureViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
 
+    @IBOutlet var temperatireValueInput: UITextField!
+    @IBOutlet var temperatureValueInputOut: UITextField!
     
-    @IBOutlet weak var massValueInput: UITextField!
-    @IBOutlet weak var massValueInputOut: UITextField!
-    
-    let massValue = ["gram", "kg", "ton", "pound"]
+    let tempValue = ["C","F", "K" ]
     
     var pickerView1 = UIPickerView()
     var pickerView2 = UIPickerView()
@@ -27,18 +26,14 @@ class MassViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         pickerView2.delegate = self
         pickerView2.dataSource = self
         
-        massValueInput.inputView = pickerView1
-        massValueInputOut.inputView = pickerView2
-        massValueInputOut.textAlignment = .center
-        massValueInput.textAlignment = .center
+    
+        temperatireValueInput.inputView = pickerView1
+        temperatureValueInputOut.inputView = pickerView2
+        temperatureValueInputOut.textAlignment = .center
+        temperatireValueInput.textAlignment = .center
+ 
         
     }
-    
-    
-    
-    
-    
-    
     
     
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -48,28 +43,30 @@ class MassViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     
     public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
-        return massValue.count
+        return tempValue.count
     }
     
     
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return massValue[row]
+        return tempValue[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView == pickerView1 {
-            massValueInput.text = massValue[row]
-            massValueInput.resignFirstResponder()
+            temperatireValueInput.text = tempValue[row]
+            temperatireValueInput.resignFirstResponder()
             
         } else if pickerView == pickerView2{
-            massValueInputOut.text = massValue[row]
-            massValueInputOut.resignFirstResponder()
+            temperatureValueInputOut.text = tempValue[row]
+            temperatureValueInputOut.resignFirstResponder()
         }
         
         
         
         
     }
+
+
 
 }

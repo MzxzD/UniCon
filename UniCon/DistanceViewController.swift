@@ -1,5 +1,5 @@
 //
-//  MassViewController.swift
+//  DistanceViewController.swift
 //  UniCon
 //
 //  Created by Mateo Došlić on 08/04/2018.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class MassViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
+class DistanceViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
 
     
-    @IBOutlet weak var massValueInput: UITextField!
-    @IBOutlet weak var massValueInputOut: UITextField!
+    @IBOutlet weak var distanceInput: UITextField!
+    @IBOutlet weak var distanceInputOut: UITextField!
     
-    let massValue = ["gram", "kg", "ton", "pound"]
+    let distanceValue = ["km", "hm", "m", "cm", "mm", "nm", "feet", "mile", "foot"]
     
     var pickerView1 = UIPickerView()
     var pickerView2 = UIPickerView()
@@ -27,14 +27,14 @@ class MassViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         pickerView2.delegate = self
         pickerView2.dataSource = self
         
-        massValueInput.inputView = pickerView1
-        massValueInputOut.inputView = pickerView2
-        massValueInputOut.textAlignment = .center
-        massValueInput.textAlignment = .center
+        distanceInput.inputView = pickerView1
+        distanceInputOut.inputView = pickerView2
+        distanceInputOut.textAlignment = .center
+        distanceInput.textAlignment = .center
         
     }
-    
-    
+
+
     
     
     
@@ -48,28 +48,31 @@ class MassViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     
     public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
-        return massValue.count
+        return distanceValue.count
     }
     
     
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return massValue[row]
+        return distanceValue[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView == pickerView1 {
-            massValueInput.text = massValue[row]
-            massValueInput.resignFirstResponder()
+            distanceInput.text = distanceValue[row]
+            distanceInput.resignFirstResponder()
             
         } else if pickerView == pickerView2{
-            massValueInputOut.text = massValue[row]
-            massValueInputOut.resignFirstResponder()
+            distanceInputOut.text = distanceValue[row]
+            distanceInputOut.resignFirstResponder()
         }
         
         
         
         
     }
+    
+
+ 
 
 }
